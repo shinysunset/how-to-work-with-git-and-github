@@ -131,9 +131,9 @@ HEAD -- это голова.
 
 ```mermaid
 flowchart TD
-A[untracked (неотслеживаемый)] -- git add --> B[staged (в списке на коммит) + tracked]
-B -- git add --> C[tracked (отслеживаемый)]
-C -- Изменения --> D[modified (изменённый)]
-D -- git add --> B
-B -- Изменения --> D
+	A[untracked (неотслеживаемый)] -- git add --> B[staged (в списке на коммит) + tracked]
+	B -- git add --> C[tracked (отслеживаемый)]
+	C -- Изменения --> D[modified (изменённый)]
+	D -- git add --> B
+	B -- Изменения --> D
 ```
