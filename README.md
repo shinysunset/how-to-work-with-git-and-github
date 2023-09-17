@@ -129,6 +129,7 @@ HEAD -- это голова.
 Статусы файлов:
 <тут пустая строка!>
 
+
 ```mermaid
 graph TD;
 	A[untracked (неотслеживаемый)] -- git add --> B[staged (в списке на коммит) + tracked]
@@ -136,4 +137,16 @@ graph TD;
 	C -- Изменения --> D[modified (изменённый)]
 	D -- git add --> B
 	B -- Изменения --> D
+```
+
+
+
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged;
+  staged    -- "git commit"     --> tracked/comitted;
+
+%% стрелка без текста для примера: 
+  A --> B;
 ```
