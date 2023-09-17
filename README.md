@@ -146,9 +146,6 @@ graph TD;
 graph LR;
   untracked -- "git add" --> staged + tracked;
   staged + tracked  -- "git commit" --> tracked;
-  tracked -- "Changes" --> modified;
-  modified -- "git add" --> staged + tracked;
-  staged + tracked -- "git commit" --> tracked;
   
 
 %% стрелка без текста для примера: 
