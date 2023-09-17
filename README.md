@@ -130,7 +130,7 @@ HEAD -- это голова.
 <тут пустая строка!>
 
 ```mermaid
-flowchart TD
+graph TD;
 	A[untracked (неотслеживаемый)] -- git add --> B[staged (в списке на коммит) + tracked]
 	B -- git add --> C[tracked (отслеживаемый)]
 	C -- Изменения --> D[modified (изменённый)]
