@@ -144,11 +144,11 @@ graph TD;
 
 ```mermaid
 graph LR;
-  untracked (неотслеживаемый) -- "git add" --> staged (в списке на коммит) + tracked;
-  staged (в списке на коммит) + tracked    -- "git commit"     --> tracked (отслеживаемый);
-  tracked (отслеживаемый) -- "Изменения" --> modified (изменённый);
-  modified (изменённый) -- "git add" --> staged (в списке на коммит) + tracked;
-  staged (в списке на коммит) + tracked -- "git commit" --> tracked (отслеживаемый);
+  untracked -- "git add" --> staged + tracked;
+  staged + tracked  -- "git commit" --> tracked;
+  tracked -- "Changes" --> modified;
+  modified -- "git add" --> staged + tracked;
+  staged + tracked -- "git commit" --> tracked;
   
 
 %% стрелка без текста для примера: 
