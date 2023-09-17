@@ -144,8 +144,8 @@ graph TD;
 
 ```mermaid
 graph LR;
-  untracked -- "git add" --> staged + tracked;
-  staged + tracked  -- "git commit" --> tracked;
+  untracked -- "git add" --> staged;
+  staged -- "git commit" --> tracked;
   
 
 %% стрелка без текста для примера: 
