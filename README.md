@@ -144,7 +144,7 @@ graph TD;
 
 ```mermaid
 graph LR;
-  untracked -- "git add" --> staged;
+  untracked -- "git add" --> staged + tracked;
   staged -- "git commit" --> tracked;
   
 
