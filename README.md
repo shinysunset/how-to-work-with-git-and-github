@@ -133,7 +133,7 @@ HEAD -- это голова.
 ```mermaid
 graph TD;
 	A[untracked (неотслеживаемый)] -- git add --> B[staged (в списке на коммит) + tracked]
-	B -- git add --> C[tracked (отслеживаемый)]
+	B -- git commit --> C[tracked (отслеживаемый)]
 	C -- Изменения --> D[modified (изменённый)]
 	D -- git add --> B
 	B -- Изменения --> D
@@ -144,8 +144,12 @@ graph TD;
 
 ```mermaid
 graph LR;
-  untracked -- "git add" --> staged;
-  staged    -- "git commit"     --> tracked/comitted;
+  untracked (неотслеживаемый) -- "git add" --> staged (в списке на коммит) + tracked;
+  staged (в списке на коммит) + tracked    -- "git commit"     --> tracked (отслеживаемый);
+  tracked (отслеживаемый) -- "Изменения" --> modified (изменённый);
+  modified (изменённый) -- "git add" --> staged (в списке на коммит) + tracked;
+  staged (в списке на коммит) + tracked -- "git commit" --> tracked (отслеживаемый);
+  
 
 %% стрелка без текста для примера: 
   A --> B;
